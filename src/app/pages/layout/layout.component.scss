@@ -1,0 +1,24 @@
+.layout {
+  height: 100%;
+  display: grid;
+  grid-template-columns: [content-start] 6fr [content-end side-menu-start] 1fr [side-menu-end];
+  grid-template-rows: [header-start] 1fr [header-end content-start] 6fr [content-end];
+  header {
+    grid-column-start: side-menu-start;
+    grid-column-end: side-menu-end;
+    grid-row-start: header-start;
+    grid-row-end: header-end;
+  }
+  aside {
+    grid-column-start: side-menu-start;
+    grid-column-end: side-menu-end;
+    grid-row-start: content-start;
+    grid-row-end: content-end;
+  }
+  main {
+    grid-column-start: content-start;
+    grid-column-end: content-end;
+    grid-row-start: header-start;
+    grid-row-end: content-end;
+  }
+}
